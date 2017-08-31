@@ -238,7 +238,7 @@ isctf(const char *p, size_t filesize)
 		return 0;
 
 	dlen = cth->cth_stroff + cth->cth_strlen;
-	if (dlen > (off_t)filesize && !(cth->cth_flags & CTF_F_COMPRESS)) {
+	if (dlen > filesize && !(cth->cth_flags & CTF_F_COMPRESS)) {
 		warnx("bogus file size");
 		return 0;
 	}
